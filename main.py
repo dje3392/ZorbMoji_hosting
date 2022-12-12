@@ -15,6 +15,6 @@ async def root():
 
 @app.get("/json/{file_name}")
 def serve_json_file(file_name: str):
-    with open(f"static/{file_name}", "r") as f:
+    with open(f"static/{file_name}.json", "r") as f:
         data=json.load(f)
         return data
